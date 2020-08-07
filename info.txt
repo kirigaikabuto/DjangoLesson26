@@ -37,7 +37,7 @@ http://127.0.0.1:8000/blog/
 4)создание репозитория на гитхабе
 echo "# DjangoLesson26" >> README.md
 git init
-git add README.md
+git add .
 git commit -m "first commit"
 git remote add origin https://github.com/kirigaikabuto/DjangoLesson26.git
 git push -u origin master
@@ -85,3 +85,5 @@ git commit -m "some changes"
 git push
 
 11.2 перезагрузить гитхаб на pythonanywhere.com
+
+pa_autoconfigure_django.py --nuke ссылку_на_гит
