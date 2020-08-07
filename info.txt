@@ -1,0 +1,74 @@
+1)создать виртуальную среду
+python -m venv venv
+venv\scripts\activate
+pip install django
+
+примерный ответ
+Successfully installed asgiref-3.2.10 django-3.1 pytz-2020.1 sqlparse-0.3.1
+
+2)создание проекта
+django-admin startproject mysite .
+python manage.py migrate
+python manage.py createsuperuser
+
+
+Примерный ответ
+
+Username (leave blank to use '4eenah'): admin
+Email address: admin@gmail.com
+Password:
+Password (again):
+The password is too similar to the username.
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+3)создание приложения
+python manage.py startapp blog
+3.1 добавить наше приложение в INSTALLED_APPS
+3.2 создание templates в blog и создание home_page.html
+3.3 создание view
+3.4 создание urls
+3.5 запуск
+python manage.py runserver
+http://127.0.0.1:8000/blog/
+
+4)создание репозитория на гитхабе
+echo "# DjangoLesson26" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/kirigaikabuto/DjangoLesson26.git
+git push -u origin master
+
+4.1 создать список используемых библиотек
+pip freeze > requirements.txt
+
+4.2 создание .gitignore и добавление ненужных файлов
+*.pyc
+*~
+__pycache__
+venv
+db.sqlite3
+/static
+.DS_Store
+.idea
+
+5)загрузка на репозиторий остальных изменений
+git add .
+git commit -m "add all files"
+git push
+
+
+6) создание аккаунта на pythonanywhere.com
+
+7) создание  access_token на pythonanywhere.com
+
+8) подготовка проекта для загрузки на хостинг
+
+9) понять причину ошибку
+
+10) исправить ошибку
+
+11) загрузить и сделать redeploy проекта
