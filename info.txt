@@ -65,10 +65,23 @@ git push
 
 7) создание  access_token на pythonanywhere.com
 
-8) подготовка проекта для загрузки на хостинг
+8) подготовка проекта для загрузки на хостинг когда создали только аккаунт
+pip3.6 install --user pythonanywhere
+pa_autoconfigure_django.py ссылка_на_гитхаб
 
 9) понять причину ошибку
 
+
+
 10) исправить ошибку
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 11) загрузить и сделать redeploy проекта
+после изменений в проекте необходимо
+11.1 загрузить на гит
+git add .
+git commit -m "some changes"
+git push
+
+11.2 перезагрузить гитхаб на pythonanywhere.com
